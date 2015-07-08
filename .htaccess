@@ -1,0 +1,24 @@
+
+# conform rutării din mainController, nu ar fi nevoie de linia următoare, dar nici greșeală nu e ...
+#raspuns : linia 4 e folositoarea deoarece va stabili ca default index.php?page=home . altfel cand dam preview ne da eroare , neavand nimic implicit
+DirectoryIndex index.php?page=home
+
+
+
+RewriteEngine On
+RewriteRule index.html index.php
+RewriteRule ^([a-zA-Z]+)\.html$ index.php?page=$1
+
+
+
+# felicitări, e foarte bine
+
+# autentificare prin user/parolă
+
+AuthType Basic
+AuthNAme "Introdu datele de autentificare"
+AuthUserFile /var/www/html/workspace/tpopa/mvc/.htpasswd
+Require valid-user
+
+
+
