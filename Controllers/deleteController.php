@@ -14,7 +14,7 @@
                 echo $_POST["id"];
             }
 
-            //will ask id to delete
+            //will ask user/student id to delete
             echo "<div class='delete'>";
                 $data=array("delete"=>"delete the wanted user , using only it's id");
                 echo $this->render(VIEWS.'deleteView.php',$data);

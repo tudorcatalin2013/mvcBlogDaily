@@ -1,4 +1,5 @@
 <div class="modify">
+    <!-- open form for modifying username,password,or email-->
     <form action="modify.html" method="POST" >
         <fieldset><legend>{{modify}}</legend>
             <p><input type="text" name="id" placeholder="Enter id of record to modify"></p>

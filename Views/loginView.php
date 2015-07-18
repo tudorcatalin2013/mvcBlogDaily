@@ -1,3 +1,4 @@
+<!-- login form and links to the register/forgot page-->
  <div class="right">    
     <form action="home.html" method="POST" >
         <fieldset><legend>{{login}}</legend>

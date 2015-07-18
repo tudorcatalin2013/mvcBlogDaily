@@ -1,7 +1,7 @@
 <?php
     
     class errorController extends Controller
-    {
+    {	
         public function __construct(){
             //if page doesnt exist displays error !
             new menuController;

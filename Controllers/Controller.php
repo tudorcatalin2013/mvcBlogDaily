@@ -1,5 +1,5 @@
 <?php
-	//main controller
+	//base controller
 	class Controller
 	{
 	    public function render($page, $data)
@@ -14,7 +14,8 @@
 	        $key = str_replace("{{","",$value);
 	        $key = str_replace("}}","",$key);
 	      
-	      	//repaces expressions surounded by {{}} with the expressions betweeen {{}}
+	      	//replaces expressions surounded by {{}} from page $template with the values of coresponding(same name)
+	      	// keys , from data array 
 	        if(array_key_exists($key, $data)){
 	            $template = str_replace($value,$data[$key],$template);
 	        }

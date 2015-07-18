@@ -4,13 +4,15 @@
 	{   
 	    protected $username,$password,$email;
     
-    	//returns an array with all students
+    	//returns an array (assoc) with all students
 		public function showStudents(){
-			$query="SELECT * FROM blog ";
+			$query="SELECT id,username,email FROM blog ";
 			$results=$this->db()->query($query);//var_dump($results);//object
 			foreach($results as $stud){
 				$stud_array[]=$stud;
 			}
+// 			echo "<pre>";
+// 			var_dump($stud_array);
 			return $stud_array;
 		}
 		
@@ -18,13 +20,15 @@
 		public function showLinks(){
 			$query="SELECT linkName FROM links ";
 			$results=$this->db()->query($query);//var_dump($results);//object
+			//having an object is not ok for us , so we go trough it transforming it into an array
 			foreach($results as $link){
+			    //links_array[] =>if links_array doesn't exist it will create it , otherwise we add as a last key,value 
 				$links_array[]=$link;
 			}
 			return $links_array;
 		}
 		
-    //verifyies if login data is correct
+    //verifyies if login data is correct.we return boolean , true if login ok , false if not
     public function loginOk($username,$password)
     {
         $ok=false;
@@ -34,6 +38,7 @@
                 ";
 
         $results=$this->db()->query($query);        
+        //if user exists(if num_rows>0) with username and password given return true
         if ($results->num_rows>0)
             {
             $ok=true;
@@ -89,11 +94,11 @@
         
     }
     //inserts new user 
-    public function register($username,$password,$email,$activCode)
+    public function register($username,$password,$email,$activCode,$imagePath)
     {
         $db=$this->db();
-        $query="INSERT INTO blog(username,password,email,activCode)
-                VALUES('{$username}','{$password}','{$email}','{$activCode}')
+        $query="INSERT INTO blog(username,password,email,activCode,imagePath)
+                VALUES('{$username}','{$password}','{$email}','{$activCode}','{$imagePath}')
                 ";
         $result=$db->query($query);
         if ($result===true)
@@ -101,6 +106,19 @@
             echo "succesfully registered";        
         }
     }
+    
+    //return image name and path
+    public function returnImagePath($username){
+        $db=$this->db();
+        $query="SELECT imagePath FROM blog
+                WHERE username='{$username}' 
+                ";
+        $result=$db->query($query);
+        while($row=mysqli_fetch_array($result)){
+            return $row["imagePath"];
+        }
+    }
+    
     //activates account
     public function activateAccount($activate,$username)
     {
@@ -111,6 +129,7 @@
                 ";
         $result=$db->query($query);        
     }
+    
     //checksis user activated its account
     public function active($username)
     {

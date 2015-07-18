@@ -6,7 +6,11 @@
             
             new headerController;
             new menuController;
+
+        //open the forgot div . will contain a left,forgotContent,,right side             
         echo "<div class='forgot'>";    
+            new leftController;
+            //checks if the email adress entered in the forgot form exists in my databse
             if(isset($_POST["email"])){
                 $email=$_POST["email"];
                 $temp=new contentModel;
@@ -29,6 +33,8 @@
             
             $data=array("forgot"=>"Recover password from ");
             echo $this->render(VIEWS."forgotView.php",$data);
+            
+            new rightController;
         echo "</div>";    
             new footerController;
         }

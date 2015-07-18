@@ -1,1 +1,7 @@
-this will be the second commit . i've just added explanatioon text on the first line 
+this will be the third commit . 
+i've 
+- comented 95 % of the code . 
+- added working slideshow .
+- added posibility for the user to use a picture 
+- added posibility to contact th blog's admin through email , or to post a review regarding his work or his colaboration. 
+- added a less file that lead me to the current css file 

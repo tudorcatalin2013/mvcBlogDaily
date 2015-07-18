@@ -3,8 +3,9 @@
 <head>
     <title>{{title}}</title>
     <link rel="stylesheet" type="text/css" href="css/myStyle.css">
+    <link href="css/hover.css" rel="stylesheet" media="all">
 </head>
-<body onload="testing()">
+<body>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
