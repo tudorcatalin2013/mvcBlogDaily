@@ -1,0 +1,4 @@
+i've used suggestive div names (suggesttive for the controllers, and views containing them ).
+i will change them later ,  after finishing the course , but for now i want my collegues to understand what i've done there . if they want .
+i've mpdified the htacces file (removed the username password option as well as the redirect to the home page - when previewing the exercitii folder),
+because i've encountered problems on the server , problems like losing data , entering into an endless loopd and not beeing able to prewiew my work.

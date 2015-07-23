@@ -2,6 +2,10 @@ body {
   background-image: url('../jpg/window.jpg');
   background-size: 1176px 965px;
 }
+li {
+   font-family:"Comic Sans MS", cursive, sans-serif
+}
+
 #container,
 .menu {
   width: 900px;
@@ -23,6 +27,10 @@ body {
   margin-left: 40px;
   line-height: 200%;
 }
+.menu li a:hover{
+    color:red;
+}
+/*.modify,*/
 .error,
 .register,
 .main,
@@ -42,6 +50,7 @@ body {
 .contactView,
 .aboutContent,
 .anotherContent,
+.modify,
 .registerContent,
 .forgotContent,
 .colleguesContent {
@@ -63,7 +72,11 @@ footer {
   clear: both;
 }
 /*.right,*/
-.modify,
+.modify{
+  width: 300px;
+  height: 550px;
+    
+}
 .delete {
   width: 300px;
   height: 550px;
@@ -76,6 +89,7 @@ footer {
 .contactView,
 .aboutContent,
 .registerContent,
+.modify,
 .forgotContent,
 .colleguesContent,
 .right {

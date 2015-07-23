@@ -1,0 +1,162 @@
+body {
+  background-image: url('../jpg/window.jpg');
+  background-size: 1176px 965px;
+}
+
+#container {
+  width: 900px;
+  height: 600px;
+  margin: auto;
+}
+
+.menu {
+  width: 900px;
+  height: 600px;
+  margin: auto;
+  height: 200px;
+}
+
+.menu li {
+  display: block;
+  float: left;
+  width: 100px;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.menu li a {
+  text-decoration: none;
+  margin-left: 40px;
+  line-height: 200%;
+}
+
+.content,.center,.contactView,.aboutContent,.anotherContent,.registerContent,.forgotContent,.colleguesContent{
+    width:580px;
+    height:550px;
+    border:1px solid black;
+    
+}
+
+.register,
+.main,
+.another,
+.error,
+.about,
+.contact,
+.logout,
+.collegues,
+.forgot{
+  width: 880px;
+  height: 550px;
+  text-align: center;
+  border:1px solid green;
+}
+
+footer {
+  width: 880px;
+  height: 50px;
+  text-align: center;
+  height: 50px;
+  clear: both;
+}
+/* .right, */
+.modify,
+.delete {
+  width: 300px;
+  height: 550px;
+  float: right;
+}
+/*social media embeded :) */
+.left,.right{
+  width: 145px;
+  height: 550px;
+  border:1px dashed red;
+}
+.left,.content,.anotherContent,.center,.contactView,.aboutContent,.registerContent,.forgotContent,.colleguesContent,.right{
+    float: left;
+}
+/*.right{*/
+/*    float:right;*/
+/*}*/
+.collegues li {
+  list-style-type: none;
+}
+.collegues li a {
+  text-decoration: none;
+}
+.collegues li a:hover {
+  font-size: 150%;
+  color: #EE5757;
+}
+
+.contactView{
+    max-height: 550px;
+    overflow-y: scroll;
+}
+
+.review p{
+    border:1px solid grey;
+    max-height:30px;
+    width:400px;
+    overflow-y: scroll;
+    margin-left:80px;
+    border-radius:15px;
+}
+
+/* .formReview:hover ,.formEmail:hover{background-color:#9E9896;} */
+.formReview:hover{-webkit-animation-name:hvr-wobble-skew;
+    animation-name:hvr-wobble-skew;-webkit-animation-duration:1s;
+    animation-duration:1s;-webkit-animation-timing-function:ease-in-out;
+    animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;
+    animation-iteration-count:1}
+
+.formEmail:hover{
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*****************************************************************/
+/****************login picture************************************/
+/*****************************************************************/
+.login{
+    display:block;
+    width:40px;
+    height:40px;
+    float:right;
+    border-radius:15px;
+}
+/*****************************************************************/
+/*****************************************************************/
+/*****************************************************************/
+/*****************************************************************/
+/*****************************************************************/
+#wrapper{
+    margin:auto;
+    width: 410px;
+    height: 500px;
+    /*border: 1px solid red;*/
+}
+
+img {
+    margin-left:5px;
+    width:400px;
+    height:400px;
+    display:none;
+     
+}
+
+.pagination{
+    width:110px;
+    margin:auto;
+    /*border: 1px solid blue;*/
+}
+
+.pagination button{
+    color:white;
+    background-color:black;
+}
+.fb-post.fb_iframe_widget{
+	/*margin-left:250px;*/
+	border:1px solid red;
+}
+

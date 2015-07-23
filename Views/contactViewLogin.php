@@ -1,9 +1,12 @@
 <!-- <div class="contactView"> -->
+<!-- i've changed my mind  initially i offered the posibility after login to post rewies ot sending emails using other names.... -->
     <p>hello , here are  my contact details {{contact}}</p>
     <p>Send me an email</p>
 
 	<form action="contact.html" method="post" class="formEmail">
+    	<!--
     	<p><input type="text" name="sender" placeholder="introduceti numele"></p>
+    	-->
     	<p><input type="text" name="email" placeholder="introduceti adresa de email"></p>
     	<p><input type="text"
            cols="50" 
@@ -16,8 +19,10 @@
 	
 	<p>{{reviews}}</p>
 	<form action="contact.html" method="post" class="formReview">
+    	<!--
     	<p><input type="text" name="sender" placeholder="introduceti numele"></p>
     	<p><input type="text" name="email" placeholder="introduceti adresa de email"></p>
+    	-->
     	<p><input type="text"
            cols="50" 
            rows="5" 

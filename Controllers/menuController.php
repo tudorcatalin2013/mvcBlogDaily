@@ -14,7 +14,7 @@
 			foreach ($this->menu as $menuItem){
 				foreach($menuItem as $Item){
 					//if user logged in will not show the login button , and if user logged out will show the loggin button
-					if (((isset($_SESSION["login"])) && ($Item==='login') && ($_SESSION["login"]===true)) || ((!isset($_SESSION["login"])) && ($Item==='logout'))) {                
+					if (((isset($_SESSION["loginT"])) && ($Item==='login') && ($_SESSION["loginT"]===true)) || ((!isset($_SESSION["loginT"])) && ($Item==='logout'))) {                
 		                //jumps current iteration
 						continue;
 					}else{

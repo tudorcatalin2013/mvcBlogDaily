@@ -1,43 +1,47 @@
 <?php
     class contactModel extends DBModel{
+        
         //inputs into database in table contact the values $sender,$message,$email
         public function registerMessage($sender,$message,$email){
-            
+            $ok=false;
             $db=$this->db();
             $query="INSERT INTO contact(sender,message,email)
                     VALUES('{$sender}','{$message}','{$email}')
                     ";
             $result=$db->query($query);
             if($result){
-                echo"message stored succesfully in database";
+               $ok=true;
             }
+            return $ok;
         }
         
         //sends message through email from $sender to site's admin 
         function sendEmail($sender,$message)
         {
-            $header="from guests";
+            $ok=false;
+            $header="from blog user ";
             $to="tudorcatalin2013@yahoo.com";
             
             if(mail($to,$sender,$message,$header))
-            {
-                echo 'email succesfully sent';
-            }else
-            {
-                echo 'email NOT sent';
+            {   
+                $ok=true;
+                //echo 'email succesfully sent';
             }
+            return $ok;
         }
         
-        //inputs in databse in table Reviews values $sender,$message, $email ,$time
-        public function registerReview($sender,$message,$email,$time){
+        //inputs in databse in table Reviews values $sender,$message ,$time
+        public function registerReview($sender,$message,$time){
+            $ok=false;
             $db=$this->db();
-            $query="INSERT INTO Reviews(sender,message,email,time)
-                    VALUES('{$sender}','{$message}','{$email}','{$time}')
+            $query="INSERT INTO Reviews(sender,message,time)
+                    VALUES('{$sender}','{$message}','{$time}')
                     ";
             $result=$db->query($query);
             if($result){
-                echo"message stored succesfully in database";
+                $ok=true;
             }
+            return $ok;
         }
         
         //gets an array of values from database table Reviews containing 

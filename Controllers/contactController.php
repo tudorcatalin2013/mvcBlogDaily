@@ -14,7 +14,7 @@
             //preparing the cache file
             $cacheFile ="cache/contactController.php";
             //setting up the second number for the cache valability
-        	$cacheTime=1; //2minute 
+        	$cacheTime=5; //2minute 
         	//if cached file exists and cached file is modified in less then 120 seconds 
         	if(file_exists($cacheFile) && time()-$cacheTime<filemtime($cacheFile) ){
         		//some extra message 
@@ -29,7 +29,13 @@
 			//**************normal html output*****************************
 			//*************************************************************    
                 	//registered/logged in users will see contact details , unregistered users will be invited to register 
-                    
+/*
+echo"<pre>";
+    print_r(array_keys(get_defined_vars()));
+    print_r(get_defined_constants());
+echo "</pre>";  
+*/
+              
                     new headerController;
                     new menuController;
 
@@ -46,16 +52,25 @@
                                 //checking if email has been sent
                     	        if(isset($_POST["submitEmail"])){
                     	        	//if fields are all complete
-                    	            if(!empty($_POST["sender"]) && !empty($_POST["email"]) && !empty($_POST["message"])){
+                    	            if(!empty($_POST["email"]) && !empty($_POST["message"])){
 	                    	            
 	                    	            //take data from form
-	                    	            $sender=$_POST["sender"];
+	                    	            $sender=$_SESSION["username"];//$_POST["sender"];
 	                    	            $email=$_POST["email"];
 	                    	            $message=$_POST["message"];
 	                    	            
-	                    	            //insert data into database table
-	                    	            $temp->registerMessage($sender,$message,$email);
-	                    	            $temp->sendEmail($email,$message);
+	                    	            //insert data into database table contact
+	                    	            if($temp->registerMessage($sender,$message,$email)){
+	                    	                echo"message sucesfully saved";
+	                    	            }else{
+	                    	                echo"message not saved";
+	                    	            }
+	                    	            
+	                    	            if($temp->sendEmail($email,$message)){
+	                    	                echo"email sent succesfully!";
+	                    	            }else{
+	                    	                echo"email not sent";
+	                    	            }
 	                    	            
 	                    	            //echo "message ready for sending ";
 	                    			}else{
@@ -66,16 +81,20 @@
                     	        //checking if review has been sent
                     	        if(isset($_POST["submitReview"])){
                     	        				//if all fields completed
-                                	            if(!empty($_POST["sender"]) && !empty($_POST["email"]) && !empty($_POST["message"])){
-	                           
+                                	            //if(!empty($_POST["sender"]) && !empty($_POST["email"]) && !empty($_POST["message"])){
+	                                            if(!empty($_POST["message"])){
 	                                	            //take data from form
-	                                	            $sender=$_POST["sender"];
-	                                	            $email=$_POST["email"];
+	                                	            $sender=$_SESSION["username"];//$_POST["sender"];
+	                                	            //$email=$_POST["email"];
 	                                	            $message=$_POST["message"];
-	                                	            $time=date('Y-m-d-h-i');
+	                                	            $time=date('Y/m/d h-i');
 	                                				
 	                                				//insert data into database table            
-	                                	            $temp->registerReview($sender,$message,$email,$time);
+	                                	            if($temp->registerReview($sender,$message,$time)){
+	                                	                echo "rereview registered succesfully";
+	                                	            }else{
+	                                	                echo"review not registered";
+	                                	            }
                                 	            }else{
                                 	                echo "you must complete all fields ";
                                 	            }
@@ -90,12 +109,13 @@
                                                     );
                                 
                                 //if user logged in
-                                if(isset($_SESSION["login"])){
+                                if(isset($_SESSION["loginT"])){
                                 	//show special array $data for logged in users , offers posibility to contact via email blog's admin or to post a review about the site's admin
                                 	echo $this->render(VIEWS."contactViewLogin.php",$data);
                                 	
                                 	//shows the reviews/comments. we open a review div for it
                                 	echo"<div class='review'>";
+                                	echo"<h3>Reviews from colabortors/clients</h3>";
                                     	$reviews=$temp->showReviews();
                                     	foreach($reviews as $rev){ 
                                     		echo $this->render(VIEWS."contactViewReview.php",

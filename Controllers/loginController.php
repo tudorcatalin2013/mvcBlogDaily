@@ -10,7 +10,7 @@
             //preparing the cache file
             $cacheFile ="cache/loginController.php";
             //setting up the second number for the cache valability
-        	$cacheTime=1; //2minute 
+        	$cacheTime=5; //2minute 
         	//if cached file exists and cached file is modified in less then 120 seconds 
         	if(file_exists($cacheFile) && time()-$cacheTime<filemtime($cacheFile) ){
         		//some extra message 
@@ -33,7 +33,7 @@
         	    echo "<div class='main'>";
         	        new leftController;
                     new centerController;
-                    //var_dump($_GET);
+
                     $data=array("login"=>"Login form");
               		echo $this->render(VIEWS.'loginView.php',$data);
                 

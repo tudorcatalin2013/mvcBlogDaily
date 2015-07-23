@@ -8,9 +8,10 @@
 		       if(isset($_SESSION["username"])){
 					$username=$_SESSION["username"];
 		            $data=array("right"=>"welcome , ".$username);
+		            
 		            echo $this->render(VIEWS."rightView.php",$data);
 		            if(isset($_SESSION["imagePath"])){
-		                echo "yeps , picture in progress";
+		                //echo "we have a profile picture! , picture in progress";
 		                echo "<img class='login' src=".$_SESSION["imagePath"].">";
 		            }
 		       	

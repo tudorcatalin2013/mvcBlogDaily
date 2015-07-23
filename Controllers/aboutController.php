@@ -10,7 +10,7 @@
     		//setting up the path and name of the cache file
             $cacheFile ="cache/aboutController.php";
             //setting up the second number for the cache valability
-        	$cacheTime=1; //2minute 
+        	$cacheTime=5; //2minute 
         	//if cached file exists and cached file is modified in less then 120 seconds 
         	if(file_exists($cacheFile) && time()-$cacheTime<filemtime($cacheFile) ){
         		//some extra message 
@@ -23,7 +23,12 @@
             ob_start();//outputbuffer start
 			//*************************************************************
 			//**************normal html output*****************************
-			//*************************************************************                
+			//*************************************************************   
+			print_r(array_keys(get_defined_vars()));
+//echo"<pre>";
+    //print_r(array_keys(get_defined_vars()));
+  //  print_r(get_defined_constants());
+//echo "</pre>";    
                         new headerController;
         				new menuController;
         			//div for the main part of the page . contains the left , the aboutContent and the right side	
@@ -36,7 +41,7 @@
         	            	
         	            	//opening aboutContent div . 
 		        	    	echo "<div class='aboutContent'>";       
-		        	           if(isset($_SESSION["login"])){ 
+		        	           if(isset($_SESSION["loginT"])){ 
 		        	           		//if user logged in sees $data , sepcial message
 		        	            	echo $this->render(VIEWS.'aboutView.php', $data);
 									//we prepare the html part of the slide show.i've put them here not knowing if it's the best way or i should've created a speacil view for this case .

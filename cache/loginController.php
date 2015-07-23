@@ -41,6 +41,25 @@
 <!-- <div class="fb-post" data-href="https://www.facebook.com/photo.php?fbid=121222864880263&amp;set=a.121222941546922.1073741827.100009776500583&amp;type=1&amp;theater" data-width="350"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/photo.php?fbid=121222864880263&amp;set=a.121222941546922.1073741827.100009776500583&amp;type=1">Posted by <a href="https://www.facebook.com/tudor.catalin.904">Tudor Catalin</a> on&nbsp;<a href="https://www.facebook.com/photo.php?fbid=121222864880263&amp;set=a.121222941546922.1073741827.100009776500583&amp;type=1">Wednesday, July 1, 2015</a></blockquote></div></div> -->
 </div>    <div class="center">
     <p>some random text . You must login to comment, view reviews , or contact me !Also here is the<b> center</b> class </p>
+    <p>Also a little example of Ajax usage from class </p>
+    <div class="contentAjax">
+        Some conent brought to you by Ajax
+    </div>
+    
+    <div class="buttonsAjax">
+        <button class="button1Ajax">Ajax Call</button>
+    </div>
+    
+    <!-- <form action="home.html" method="POST" > -->
+    <form action="add-student.php" method="post" id="submit-student-form">
+        <input name="fname" id="fname" placeholder='First name'/>
+        <input name="lname" id="lname" placeholder='Last name' />
+        <input type="submit" id="submit-student" />
+    </form>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="Ajax/ajax2.js"></script>    
+    
 </div>    <!-- login form and links to the register/forgot page-->
  <div class="right">    
     <form action="home.html" method="POST" >
@@ -55,7 +74,15 @@
         </fieldset>	
     </form>
  </div>    </div><footer><p>Copyright 2015 @ Tudor Catalin Popa</p>
+
+		<a href="https://twitter.com/tudorcatalin201" 
+			class="twitter-follow-button" 
+			data-show-count="false" 
+			data-show-screen-name="false">Follow @tudorcatalin201</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>		
+
 	    <!-- div for the facebook like butoon -->
+	    
 	    <div class="fb-like" 
 	    	data-href="http://128.199.36.184/workspace/tpopa/mvc/home.html" 
 	    	data-layout="standard" 
@@ -64,11 +91,17 @@
 	    	data-share="true">
 	    </div>
 	    <!-- div for the facebook follow butoon -->
+	    
 	    <div class="fb-follow" 
 	    	data-href="https://www.facebook.com/tudor.catalin.904" 
 	    	data-layout="standard" 
 			data-show-faces="true">
 		</div>
+		
+
+
+		
+
 </footer>
 <!-- open the jquery library for the slidder :) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

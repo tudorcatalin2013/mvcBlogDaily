@@ -24,7 +24,7 @@
 <!-- creates links for the menu -->
     <li><a href="another.html"><h3>another</h3></a></li>
 <!-- creates links for the menu -->
-    <li><a href="logout.html"><h3>logout</h3></a></li>
+    <li><a href="login.html"><h3>login</h3></a></li>
 <!-- creates links for the menu -->
     <li><a href="collegues.html"><h3>collegues</h3></a></li>
 </div><div class='main'><!-- two buttons , for showing time,stoping time and a few links -->
@@ -39,16 +39,18 @@
 	<p><a href="https://www.linkedin.com">Check your LinkedIn Account</a></p>
 	
 <!-- <div class="fb-post" data-href="https://www.facebook.com/photo.php?fbid=121222864880263&amp;set=a.121222941546922.1073741827.100009776500583&amp;type=1&amp;theater" data-width="350"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/photo.php?fbid=121222864880263&amp;set=a.121222941546922.1073741827.100009776500583&amp;type=1">Posted by <a href="https://www.facebook.com/tudor.catalin.904">Tudor Catalin</a> on&nbsp;<a href="https://www.facebook.com/photo.php?fbid=121222864880263&amp;set=a.121222941546922.1073741827.100009776500583&amp;type=1">Wednesday, July 1, 2015</a></blockquote></div></div> -->
-</div>    <div class='content'><p>19 cata cata@email.com</p>
-<p>30 aurel teodor@emails.com</p>
-<p>68 tudorpopa2003 tudorpopa2003@yahoo.com.au</p>
-<p>71 dummyUser dummy@dummy.com</p>
-<p>74 webdevelopingtest webdevelopingtests@gmail.com</p>
-<p>75 pbradea reazidealth@yahoo.com</p>
-<p>89 tudor tudorcatalin2013@yahoo.com</p>
-<p><a href='modify.html'>Modify</a></p><p><a href='delete.html'>Delete</a></p></div><div class='right'><p>welcome , tudor </p>
-yeps , picture in progress<img class='login' src=Uploads/profilePicture.jpg></div><footer><p>Copyright 2015 @ Tudor Catalin Popa</p>
+</div>    <div class='content'><p> Welcome to My personal blog ! This summs up a big part of what i've learned at the Scoala Informala's course . To actually see it work please register and log in . If you don't feel like registering  use the username <b>tudor</b> and password <b>parola</b> . Please don't break it and delete my login account:)</p>
+</div><div class='right'><p>here is the right side. i recommend logging in to see what thisblog can do  </p>
+</div><footer><p>Copyright 2015 @ Tudor Catalin Popa</p>
+
+		<a href="https://twitter.com/tudorcatalin201" 
+			class="twitter-follow-button" 
+			data-show-count="false" 
+			data-show-screen-name="false">Follow @tudorcatalin201</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>		
+
 	    <!-- div for the facebook like butoon -->
+	    
 	    <div class="fb-like" 
 	    	data-href="http://128.199.36.184/workspace/tpopa/mvc/home.html" 
 	    	data-layout="standard" 
@@ -57,11 +59,17 @@ yeps , picture in progress<img class='login' src=Uploads/profilePicture.jpg></di
 	    	data-share="true">
 	    </div>
 	    <!-- div for the facebook follow butoon -->
+	    
 	    <div class="fb-follow" 
 	    	data-href="https://www.facebook.com/tudor.catalin.904" 
 	    	data-layout="standard" 
 			data-show-faces="true">
 		</div>
+		
+
+
+		
+
 </footer>
 <!-- open the jquery library for the slidder :) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

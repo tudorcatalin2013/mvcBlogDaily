@@ -9,7 +9,7 @@
 			//preparing the cache file
             $cacheFile ="cache/colleguesController.php";
             //setting up the second number for the cache valability
-        	$cacheTime=1; //2minute 
+        	$cacheTime=5; //2minute 
         	//if cached file exists and cached file is modified in less then 120 seconds 
         	if(file_exists($cacheFile) && time()-$cacheTime<filemtime($cacheFile) ){
         		//some extra message 
@@ -23,6 +23,12 @@
 			//*************************************************************
 			//**************normal html output*****************************
 			//*************************************************************
+/*
+echo"<pre>";
+    print_r(array_keys(get_defined_vars()));
+    print_r(get_defined_constants());
+echo "</pre>";   
+*/
         			new headerController;
         			new menuController;
         			

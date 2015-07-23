@@ -194,7 +194,7 @@
         $header="from blog";
         if(mail($to,$subject,$body,$header))
         {
-            echo 'email succesfully sent';
+            echo 'An email was sent to your email adress with the activation link';
         }else
         {
             echo 'email NOT sent';
